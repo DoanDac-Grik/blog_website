@@ -1,0 +1,40 @@
+{
+  "name": "blog_webapp",
+  "version": "1.0.0",
+  "description": "my first blog website ^.^",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "watch": "node-sass scss/app.scss public/css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoanDac-Grik/blog_website.git"
+  },
+  "keywords": [
+    "learning_nodejs",
+    "blog_web"
+  ],
+  "author": "Doan Van Dac (Grik)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoanDac-Grik/blog_website/issues"
+  },
+  "homepage": "https://github.com/DoanDac-Grik/blog_website#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "mongoose": "^5.13.3",
+    "mongoose-slug-generator": "^1.0.4",
+    "moongoose": "^0.0.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}
