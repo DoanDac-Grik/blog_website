@@ -7,6 +7,7 @@ const BlogPostSchema = new Schema({
     summary: String,
     body: String,
     author: String,
+    image: String,
     slug: { type: String, slug: "title", unique: true }
 },
 {

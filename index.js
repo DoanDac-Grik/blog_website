@@ -4,7 +4,10 @@ const port = 3000;
 const db = require('./config/db');
 const morgan =require('morgan');
 const route =require ('./routes/index.js');
+const fileUpload = require('express-fileupload');
 
+//File upload
+app.use(fileUpload());
 //Connect mongodb
 db.connect();
 //HTTP log
