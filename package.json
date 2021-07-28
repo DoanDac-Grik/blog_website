@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "watch": "node-sass scss/app.scss public/css/app.css"
+    "watch": "node-sass scss/login.scss public/css/login.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/DoanDac-Grik/blog_website#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parse": "^0.1.0",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
