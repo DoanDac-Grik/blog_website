@@ -18,13 +18,15 @@ class AuthController {
     }
     //[post] /userlogin
     userlogin(req,res,next){
-      
-
+        
         const { username, password } = req.body;
+        // **Vướng mắc phần callback => promise
         ManagerAcc.findOne({ username: username }, (error, user) => {
         if (user) {
             bcrypt.compare(password, user.password, (error, same) => {
-            if (same) { 
+            if (same) {
+                //req.session.[cái gì đó] chứa giá trị trong 1 session
+                req.session.userId = user._id;
                 res.redirect('/');
             } else {
                 res.send({message:'Sai mật khẩu'});
@@ -35,6 +37,10 @@ class AuthController {
             res.send({message: 'Không tồn tại username'});
             }
         })
+    }
+    //[get] /logout
+    userlogout(req, res, next) {
+        req.session.destroy(()=> { res.redirect('/')});
     }
 }
 module.exports = new AuthController();
